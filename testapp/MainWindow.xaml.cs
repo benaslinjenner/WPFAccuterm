@@ -27,37 +27,10 @@ namespace testapp
 
         private readonly AccuTermClasses.AccuTerm app;
 
-        const int WINDOW_STYLE = (-16);
-
-        const UInt32 WINDOW_VISIBLE = 0x10000000;
-
-        const int SM_CXFULLSCREEN = 16;
-
-        const int SM_CYFULLSCREEN = 17;
-
-        const int widthOffset = 70;
-
-        const int heightOffset = 150;
-
-        const int DPI_CHANGE_PER_25_PERCENT_SCALE = 24;
-
-        [DllImport("user32.dll")]
-        public static extern bool SetForegroundWindow(IntPtr hWnd);
 
         [DllImport("user32.dll", SetLastError = true)]
         public static extern uint SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
-
-        [DllImport("user32.dll")]
-        public static extern void SetMenu(IntPtr hWnd, IntPtr hMen);
-
-        [DllImport("user32.dll")]
-        static extern int SetWindowLong(IntPtr hWnd, int nIndex, uint dwNewLong);
-
-        [DllImport("user32.dll")]
-        public static extern int GetDpiForWindow(IntPtr hWnd);
-
-        [DllImport("user32.dll")]
-        static extern int GetSystemMetricsForDpi(int nIndex, int dpi);
+       
         public MainWindow()
         {
             InitializeComponent();
